@@ -1,0 +1,32 @@
+<div class="card">
+  <p-table responsiveLayout="stack" [value]="plantData">
+      <ng-template pTemplate="caption">
+        <div class="p-d-flex">
+          <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2" ></button>
+            
+        </div>
+      </ng-template>
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+              <th>MeasurementId </th>
+              <th>NumericValue</th>
+              <th>StringValue</th>
+              <th>Precision</th>
+              <th>Parameter</th>
+              <th>utcCapturedTimestamp</th>
+              <th>utcSavedTimestamp</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-plantData let-columns="columns">
+          <tr>
+              <td><span class="p-column-title">Name</span>{{plantData.measurementId}}</td>
+              <td><span class="p-column-title">Name</span>{{plantData.numericValue}}</td>
+              <td><span class="p-column-title">Name</span>{{plantData.stringValue}}</td>
+              <td><span class="p-column-title">Name</span>{{plantData.precision}}</td>
+              <td><span class="p-column-title">Name</span>{{plantData.parameter}}</td>
+              <td><span class="p-column-title">Name</span>{{plantData.utcCapturedTimestamp}}</td>
+              <td><span class="p-column-title">Name</span>{{plantData.utcSavedTimestamp}}</td>
+      </ng-template>
+  </p-table>
+</div>
+
